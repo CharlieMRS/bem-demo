@@ -1,0 +1,34 @@
+.slider {
+  background: $primary1;
+  border-radius: $borderRadius;
+  position: relative;
+  padding-right: .5em;
+  &:after {
+    content: '';
+    background: linear-gradient(90deg, rgba(2,0,36,0) 87%, rgba(156,105,226,1) 100%);
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    border-radius: $borderRadius;
+    z-index: 1;
+  }
+  &__slides {
+    & > .section > .section__col {
+      margin-right: 1em;
+    }
+  }
+  &__controls {
+    z-index: 2;
+  }
+
+  .section_card {
+    background: #ffffff;
+    border-radius: $borderRadiusSm;
+    align-items: start;
+  }
+  .section__title {
+    color: #ffffff;
+  }
+}

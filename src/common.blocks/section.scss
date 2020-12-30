@@ -1,4 +1,5 @@
 $borderRadius: 50px;
+$borderRadiusSm: 20px;
 $primary1: #9C69E2;
 $primary2: #F063B8;
 
@@ -12,6 +13,8 @@ $primary2: #F063B8;
 
   &_wrapper {
     max-width: 1120px;
+  }
+  &_spaced {
     margin: 4em auto;
   }
   &_center {
@@ -23,11 +26,24 @@ $primary2: #F063B8;
   &_mbn {
     margin-bottom: 0;
   }
+  &_pan {
+    padding: 0;
+  }
   &_ptn {
     padding-top: 0;
   }
   &_pbn {
     padding-bottom: 0;
+  }
+  &_pln {
+    padding-left: 0;
+  }
+  &_prn {
+    padding-right: 0;
+  }
+  &_nowrap {
+    flex-wrap: nowrap;
+    overflow: hidden;
   }
   &_hero {
     background-image: url('/img/hero.png');
@@ -48,46 +64,13 @@ $primary2: #F063B8;
     &_halfsy, &_full {
       flex: 0 0 100%;
     }
+    &_spaced {
+      margin: 4em auto;
+    }
   }
-}
 
-.nav {
-  &__menu {
-    list-style: none;
-    padding-left: 0px;
-  }
-  &__item {
-    margin-bottom: 0.6em;
-  }
-}
+  @media screen and (min-width: 780px) {
 
-.button {
-  border-radius: 50px;
-  padding: 1em;
-  border: none!important;
-  background: #fff;
-  &_shadow {
-    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
-  }
-  &_simple {
-    background: transparent;
-  }
-  &_primary1 {
-    color: #fff;
-    background: $primary1;
-  }
-  &_primary2 {
-    color: #fff;
-    background: $primary2;
-  }
-  &__arrow {
-    color: $primary1;
-  }
-}
-
-@media screen and (min-width: 780px) {
-
-  .section {
     justify-content: space-between;
     &_header {
       .section__col {
@@ -120,9 +103,27 @@ $primary2: #F063B8;
       }
       &_halfsy {
         flex: 0 0 50%;
+        &_gutter {
+          flex: 0 0 45%;
+        }
       }
-      &_halfsy_gutter {
-        flex: 0 0 45%;
+      &_3_fourthsy {
+        flex: 0 0 75%;
+        &_gutter {
+          flex: 0 0 70%;
+        }
+      }
+      &_1_fourthsy {
+        flex: 0 0 25%;
+        &_gutter {
+          flex: 0 0 20%;
+        }
+      }
+      &_2_thirdsy {
+        flex: 0 0 66.67%;
+      }
+      &_1_thirdsy {
+        flex: 0 0 33.33%;
       }
     }
     &_footer {
@@ -131,21 +132,7 @@ $primary2: #F063B8;
         justify-content: space-between;
       }
     }
-  }
-  .nav {
-    &__menu {
-      padding-left: 2em;
-      &_stack {
-        padding-left: 0em;
-        .nav__item {
-          display: block;
-          margin-left: 0em;
-        }
-      }
-    }
-    &__item {
-      display: inline;
-      margin-left: 2em;
-    }
+
   }
 }
+
